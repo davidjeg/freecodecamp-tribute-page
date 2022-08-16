@@ -12,6 +12,7 @@ html{
 body{
   font-family: Roboto,sans-serif;
   color: #808080;
+  font-size: 1.6rem;
 }
 
 
@@ -101,6 +102,7 @@ ul li a:hover{
 
 .biography-container{
   width: 100%;
+  margin-top: -5vh;
 }
 
 .main{
@@ -108,12 +110,23 @@ ul li a:hover{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  max-width: 130rem;
+  max-width: 100rem;
   margin: 0 auto;
   padding: 10rem 0;
-
-
 }
+
+.biography-text-container{
+  padding: 0 5rem;
+  text-align: justify;
+}
+
+.biography-text-container h1{
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+
 
 
 /*  SECTION TWO */
@@ -122,6 +135,7 @@ ul li a:hover{
   width: 100%;
   background-color: black;
   color: white;
+  margin-top: -5vh;
 }
 
 .achivements-container{
@@ -139,7 +153,6 @@ font-size: 3rem;
 }
 
 .achivements-container ul li{
-  font-size: 1.6rem;
   padding: .2rem;
   margin-top: 2rem;
 }
