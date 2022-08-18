@@ -13,15 +13,19 @@ html {
 
 body {
   font-family: Roboto, sans-serif;
-  color: #808080;
   font-size: 1.6rem;
+  color: #777;
 }
 
 /*  Navbar  */
 .logo a {
   text-decoration: none;
-  color: white;
   font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+.logo a:hover {
+  color: #dcdcdc;
 }
 
 .navbar {
@@ -58,13 +62,13 @@ body {
 
 .nav-menu li a {
   font: 1.6rem;
-  color: white;
+  color: #a9a9a9;
   font-weight: 400;
   transition: all 0.3s ease;
 }
 
 .nav-menu li a:hover {
-  color: #482ff7;
+  color: #dcdcdc;
 }
 
 /* BURGUER */
@@ -160,43 +164,53 @@ body {
 /*  SECTION HERO */
 header {
   height: 100vh;
-  background-image: url('http://m.gettywallpapers.com/wp-content/uploads/2022/01/Michael-Jackson-Wallpaper-576x1024.jpg');
-  background-position: left;
-  background-size: contain;
+  background-image: url('./public/src/img/michaeljackson.jpg');
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-color: black;
   position: relative;
   z-index: -1;
-  position: relative;
 }
 
 .text-primary-container {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-}
-
-.heading-primary {
-  color: #808080;
-  font-weight: 700;
-  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  max-width: 50rem;
 }
 
 .heading-primary-main {
-  display: block;
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 3.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.heading-secondary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+  color: #fff;
 }
 
-.heading-secondary {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.5rem;
+@media (max-width: 48rem) {
+  .text-primary-container {
+    left: 50%;
+  }
+  .heading-primary-main {
+    font-size: 3rem;
+    letter-spacing: 2.5rem;
+  }
+  .heading-secondary {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+  }
 }
 
 /* SECTION 1 */
@@ -219,11 +233,13 @@ header {
 .biography-text-container {
   padding: 0 5rem;
   text-align: justify;
+  line-height: 2.5rem;
 }
 
 .biography-text-container h1 {
   padding-bottom: 3rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #696969;
   text-align: center;
 }
 
@@ -242,20 +258,21 @@ header {
 .achivements-section {
   width: 100%;
   background-color: black;
-  color: white;
 }
 
 .achivements-container {
   display: flex;
-  padding: 10rem 3rem;
+  padding: 10rem 0 10rem 3rem;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   max-width: 100rem;
+  line-height: 2.5rem;
 }
 
 .achivements-container h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #d3d3d3;
 }
 
 .achivements-container ul li {
@@ -270,21 +287,62 @@ header {
 /* SECTION THREE */
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1.6rem;
+  max-width: 100rem;
+  position: relative;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  max-width: 140rem;
-  padding: 2rem 1rem;
+  display: flex;
+  padding: 10rem 0;
+}
+.slides {
+  display: none;
+  margin: 0 auto;
+  display: flex;
+}
+.slides img {
+  width: 100%;
+  height: 50rem;
+  object-fit: contain;
 }
 
-.gallery img {
-  width: 100%;
-  max-width: 35rem;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 1rem;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -2.2rem;
+  padding: 1.6rem;
+  color: black;
+  font-weight: bold;
+  font-size: 1.8rem;
+  transition: 0.6s ease;
+  border-radius: 0 0.3rem 0.3rem 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.numberText {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 0.8rem 1.2rem;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 4;
+  }
+  to {
+    opacity: 1;
+  }
 }

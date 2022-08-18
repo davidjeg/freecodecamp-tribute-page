@@ -23,7 +23,7 @@
     <div class="topnav">
       <nav class="navbar">
         <div class="logo">
-          <a href="#hero-section">M J</a>
+          <a href="#hero-section">MJ</a>
         </div>
         <ul class="nav-menu">
           <li><a href="#hero-section">Home</a></li>
@@ -39,16 +39,16 @@
 
     <header id="hero-section">
       <div class="text-primary-container">
-        <h1 class="heading-primary">
-          <span class="heading-primary-main">Michael Jackson</span>
-          <span class="heading-secondary">the king of pop</span>
-        </h1>
-        <p>
-          “In a world filled with hate, we must still dare to hope. In a world
-          filled with anger, we must still dare to comfort. In a world filled
-          with despair, we must still dare to dream. And in a world filled with
-          distrust, we must still dare to believe.”
-        </p>
+        <span class="heading-primary-main">Michael Jackson</span>
+        <span class="heading-secondary">the king of pop</span>
+        <div>
+          <p>
+            “In a world filled with hate, we must still dare to hope. In a world
+            filled with anger, we must still dare to comfort. In a world filled
+            with despair, we must still dare to dream. And in a world filled
+            with distrust, we must still dare to believe.”
+          </p>
+        </div>
       </div>
     </header>
 
@@ -190,33 +190,67 @@
       </section>
 
       <div class="gallery" id="gallery">
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/636f5449ef3fd8c47f91f4b519e779c3.jpg#636f5449ef3fd8c47f91f4b519e779c3"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/3eaaf6b676d6416fb58353e9db37f003.jpg#3eaaf6b676d6416fb58353e9db37f003"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/51ca1bce0c274d1d83fa8a0a27b83d2c.jpg#51ca1bce0c274d1d83fa8a0a27b83d2c"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/ca74cbe52efa42cf8c63d6073f8c38d6.jpg#ca74cbe52efa42cf8c63d6073f8c38d6"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/2c4e7fa7d3c354e78da5c9701d90c6f7.jpg#2c4e7fa7d3c354e78da5c9701d90c6f7"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/2fece20fbab74cf69a516502eadce42f.jpg#2fece20fbab74cf69a516502eadce42f"
-        />
-        <img
-          src="https://lastfm.freetls.fastly.net/i/u/770x0/14ba619a80a2bc89bb02201e40a4b3c9.jpg#14ba619a80a2bc89bb02201e40a4b3c9"
-        />
+        <div class="slides fade">
+          <div class="numberText">1 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/636f5449ef3fd8c47f91f4b519e779c3.jpg#636f5449ef3fd8c47f91f4b519e779c3"
+          />
+        </div>
+
+        <div class="slides fade">
+          <div class="numberText">2 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/3eaaf6b676d6416fb58353e9db37f003.jpg#3eaaf6b676d6416fb58353e9db37f003"
+          />
+        </div>
+
+        <div class="slides fade">
+          <div class="numberText">3 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/51ca1bce0c274d1d83fa8a0a27b83d2c.jpg#51ca1bce0c274d1d83fa8a0a27b83d2c"
+          />
+        </div>
+        <div class="slides fade">
+          <div class="numberText">4 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/ca74cbe52efa42cf8c63d6073f8c38d6.jpg#ca74cbe52efa42cf8c63d6073f8c38d6"
+          />
+        </div>
+        <div class="slides fade">
+          <div class="numberText">5 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/2c4e7fa7d3c354e78da5c9701d90c6f7.jpg#2c4e7fa7d3c354e78da5c9701d90c6f7"
+          />
+        </div>
+        <div class="slides fade">
+          <div class="numberText">6 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/2fece20fbab74cf69a516502eadce42f.jpg#2fece20fbab74cf69a516502eadce42f"
+          />
+        </div>
+        <div class="slides fade">
+          <div class="numberText">7 / 7</div>
+          <img
+            src="https://lastfm.freetls.fastly.net/i/u/770x0/14ba619a80a2bc89bb02201e40a4b3c9.jpg#14ba619a80a2bc89bb02201e40a4b3c9"
+          />
+        </div>
+
+        <!-- NEXT - PREV BUTTONS -->
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+
+        <!-- DOT BUTTON -->
+        <div class="dot"></div>
       </div>
     </main>
 
     <script>
       const navMenu = document.querySelector('.nav-menu');
       const burguerContainer = document.querySelector('.burguer_container');
+      const slides = document.querySelectorAll('.slides');
+      const dots = document.querySelector('.dots');
+      const next = document.querySelector('.next');
+      const prev = document.querySelector('.prev');
       let isMenuOpen = false;
 
       burguerContainer.addEventListener('click', () => {
@@ -230,6 +264,34 @@
           isMenuOpen = false;
         }
       });
+
+      let slideIndex = 1;
+
+      next.addEventListener('click', () => {
+        console.log('test');
+        showSlides((slideIndex += 1));
+      });
+      prev.addEventListener('click', () => {
+        console.log('test');
+        showSlides((slideIndex = slideIndex - 1));
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        showSlides(slideIndex);
+        console.log(slides);
+      });
+      function showSlides(n) {
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        slides[slideIndex - 1].style.display = 'block';
+      }
     </script>
   </body>
 </html>
