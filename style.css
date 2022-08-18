@@ -162,14 +162,13 @@ body {
 }
 
 /*  SECTION HERO */
-header {
+#hero-section {
+  overflow: hidden;
+}
+#image {
+  object-fit: cover;
   height: 100vh;
-  background-image: url('./public/src/img/michaeljackson.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: -1;
+  width: 100%;
 }
 
 .text-primary-container {
@@ -183,7 +182,7 @@ header {
   max-width: 50rem;
 }
 
-.heading-primary-main {
+#title {
   font-size: 5rem;
   font-weight: 700;
   letter-spacing: 3.5rem;
@@ -196,6 +195,7 @@ header {
   letter-spacing: 1.5rem;
   font-weight: 700;
   margin-bottom: 5rem;
+  margin-top: 1.5rem;
   color: #fff;
 }
 
@@ -203,7 +203,7 @@ header {
   .text-primary-container {
     left: 50%;
   }
-  .heading-primary-main {
+  #title {
     font-size: 3rem;
     letter-spacing: 2.5rem;
   }
