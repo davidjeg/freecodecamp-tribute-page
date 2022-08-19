@@ -5,19 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Vite App</title>
+    <title>Tribute Page</title>
   </head>
   <body>
     <div class="topnav">
@@ -38,13 +31,6 @@
     </div>
 
     <header id="hero-section">
-      <div id="img-div">
-        <img
-          src="./public/src/img/michaeljackson.jpg"
-          alt="micahel-jackson"
-          id="image"
-        />
-      </div>
       <div class="text-primary-container">
         <span id="title">Michael Jackson</span>
         <span class="heading-secondary">the king of pop</span>
@@ -62,31 +48,40 @@
     <main id="main">
       <section class="biography-container" id="biography-section">
         <div class="main">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/3/31/Michael_Jackson_in_1988.jpg"
-            alt="Michael_Jackson_in_1988"
-          />
+          <figure id="img-div">
+            <img
+              id="image"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/31/Michael_Jackson_in_1988.jpg"
+              alt="Michael_Jackson_in_1988"
+            />
+            <figcaption id="img-caption">Michael hackson</figcaption>
+          </figure>
           <div class="biography-text-container">
-            <h1>Biography</h1>
+            <h3>Biography</h3>
             <p>
-              Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an
-              American singer, songwriter, dancer, and philanthropist. Dubbed
-              the "King of Pop", he is regarded as one of the most significant
-              cultural figures of the 20th century. Over a four-decade career,
-              his contributions to music, dance, and fashion, along with his
-              publicized personal life, made him a global figure in popular
-              culture. Jackson influenced artists across many music genres;
-              through stage and video performances, he popularized complicated
-              dance moves such as the moonwalk, to which he gave the name, as
-              well as the robot. He is the most awarded individual music artist
-              in history.
+              <a
+                href="https://es.wikipedia.org/wiki/Michael_Jackson"
+                id="tribute-link"
+                target="_blank"
+                >Michael Joseph Jackson</a
+              >
+              (August 29, 1958 – June 25, 2009) was an American singer,
+              songwriter, dancer, and philanthropist. Dubbed the "King of Pop",
+              he is regarded as one of the most significant cultural figures of
+              the 20th century. Over a four-decade career, his contributions to
+              music, dance, and fashion, along with his publicized personal
+              life, made him a global figure in popular culture. Jackson
+              influenced artists across many music genres; through stage and
+              video performances, he popularized complicated dance moves such as
+              the moonwalk, to which he gave the name, as well as the robot. He
+              is the most awarded individual music artist in history.
             </p>
           </div>
         </div>
       </section>
 
       <section class="achivements-section" id="achivements-section">
-        <div class="achivements-container">
+        <div id="tribute-info" class="achivements-container">
           <h1>Achivements</h1>
           <ul>
             <li>
