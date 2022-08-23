@@ -64,7 +64,7 @@ body{
   background-repeat: no-repeat;
   background-size:cover;  
   background-position: center;
-  filter: grayscale(70%) brightness(60%);
+  filter: grayscale(70%) brightness(40%);
   z-index: -1;
 
 }
@@ -74,9 +74,12 @@ body{
   max-width: 130rem;  
   padding: 0 3.2rem;
 }
+
+
+
+
 .hero-text{
   max-width: 50%;
-  color: #fff;
 }
 
 .heading-primary{
@@ -88,12 +91,12 @@ body{
   color: #333;
 }
 .heading-primary-white{
-  color: #e4e6eb;
+  color: #E7E6DD;
 }
 
 .hero-subheading{
   margin-bottom: 4.8rem;
-  font-size: 4.4rem;
+  font-size: 3.6rem;
 }
 
 .hero-quote{
@@ -132,6 +135,7 @@ body{
   width: 100%;
   max-width: 600px;
   object-fit: cover;
+  
 }
 
 
@@ -150,15 +154,15 @@ body{
 }
 .heading-tertiary{
   margin-bottom: 1.6rem;
-  font-size: 3rem;
-  color: #fff;
+  font-size: 2.4rem;
+  color: #E7E6DD;
 }
 
 .achivements-list p{
   font-size: 2rem;
 }
 .achivements-list li{
-  font-size: 3.2rem;
+  font-size: 2.4rem;
 }
 
 
@@ -289,31 +293,82 @@ transform: rotate(-45deg) translate(35px,35px);
 
 
 
-@media (max-width:50rem){
 
- .navbar-list.open {
 
-  transform: translateY(0%);
-  transition: all .5s;
+
+
+@media (max-width: 84em){
+  .hero{
+    max-width: 120rem;
+  }
+
+  .heading-primary{
+    font-size: 4.4rem !important;
+  }
+  .hero-subheading{
+    font-size: 3rem;
+  }
+  .hero-quote{
+    font-size: 1.8rem;
+  }
+  .biography-description{
+    font-size: 1.8rem;
+  }
+
+  .achivements-list li{
+    font-size: 1.8rem;
+  }
+  .heading-tertiary{
+    font-size: 2.0rem;
+  }
+.achivements-list p{
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 75em){
+  .achivements-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+.biography-img-box{
+  justify-content: center;
+}
+
+
+  .hero-section{
+    align-items: center;
+  }
+  .hero-text{
+    max-width: 100%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
     align-items: center;
+  }
+
+}
+@media (max-width:50em){
+
+ .navbar-list.open {
+    left: 0;
+
 } 
   .navbar-list{
     position: fixed;
-    transform: translateY(-100%);
-    transition:  transform .5s;
+    left: -100%;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background: black;
-    color: white;
-
-    padding-top: 4rem;
+    padding-top: 2.4rem;
+    gap: 2.4rem;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black ;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+    z-index: 2;
   }
+
+
+
   .burguer-container{
     margin-left: auto;
     display: flex;
@@ -321,5 +376,23 @@ transform: rotate(-45deg) translate(35px,35px);
 
   .navbar-list li a{
     color: #fff;
+  }
+
+  .grid--2-cols{
+    grid-template-columns: 1fr;
+  }
+  .heading-primary{
+    font-size: 3.0rem !important;
+  }
+  
+  .achivements-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .heading-tertiary{
+    font-size: 1.8rem;
+  }
+  .hero-quote{
+    font-size: 1.6rem;
   }
 }
